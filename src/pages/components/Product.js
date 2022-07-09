@@ -4,8 +4,8 @@ import React, { useState } from 'react'
 import Currency from 'react-currency-formatter';
 
 function Product({ id, title, price, description, category, image, rating }) {
-    const [productRating] = useState(Math.floor(rating.rate));
-    const [hasPrime] = useState(Math.floor(rating.rate) > 3);
+    const [productRating] = useState(Math.floor(rating?.rate) || 2);
+    const [hasPrime] = useState(Math.floor(rating?.rate) > 3);
     // console.log(hasPrime);
 
     return (
